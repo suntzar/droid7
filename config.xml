@@ -15,6 +15,7 @@
 
     <preference name="ScrollEnabled" value="false" />
     <preference name="android-minSdkVersion" value="22" />
+    <preference name="android-targetSdkVersion" value="33" />
     <preference name="BackupWebStorage" value="none" />
     <preference name="DisallowOverscroll" value="true" />
     
