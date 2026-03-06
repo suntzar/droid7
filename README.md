@@ -43,5 +43,11 @@ O app agora funciona como um wrapper Cordova que aponta diretamente para a VM (`
 - `config.xml`: Configurações do app Cordova e permissões de navegação.
 - `codemagic.yaml`: Pipeline de compilação automatizada.
 
+### 🎨 Ícones e Splash Screens
+Por padrão, este template não inclui arquivos de imagem. Para adicionar ícones:
+1. Crie o arquivo `www/res/icon/android/icon.png`.
+2. Adicione a tag `<icon src="www/res/icon/android/icon.png" />` dentro de `<platform name="android">` no `config.xml`.
+
+
 ---
 *Última atualização: 06 de Março de 2026*
