@@ -4,10 +4,11 @@ Este projeto é um template de aplicação mobile híbrida (PWA/TWA) focado na e
 
 ## 🚀 Estado Atual: Híbrido Cordova/PWA (TWA Style)
 
-O app agora funciona como um wrapper Cordova que aponta diretamente para a VM (`163.176.132.233:3000`), permitindo atualizações de conteúdo via web sem precisar reinstalar o APK.
+O app agora funciona como um wrapper Cordova que aponta diretamente para a VM (`163.176.132.233:3000`). O projeto foi convertido para CommonJS (removido `"type": "module"`) para garantir compatibilidade total com os scripts internos do Cordova CLI.
 
 ### ✅ Funcionalidades Implementadas:
 - **Suporte Cordova:** Configurado via `config.xml` para conexão remota.
+- **Compatibilidade CJS:** Removido o suporte nativo a ES Modules para rodar o `cordova-android` sem erros de API.
 - **OTA Updates:** Mudanças feitas no código fonte da VM refletem instantaneamente no app mobile.
 - **Workflow Codemagic:** Arquivo `codemagic.yaml` configurado para gerar APKs automaticamente.
 - **Framework7 Core (v9):** Uso da versão Vanilla JS + TypeScript.
