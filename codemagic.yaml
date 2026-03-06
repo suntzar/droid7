@@ -1,22 +1,23 @@
-# Configuração Droid7 Codemagic Workflow - Estável v2.4 (SDK Fix)
+# Configuração Droid7 Codemagic Workflow - Profissional v3.0 (Estabilidade Total)
 workflows:
   android-debug-build:
-    name: Construir APK de Teste v2.4
+    name: Construir APK de Teste v3.0
     max_build_duration: 60
     instance_type: mac_mini_m1
     scripts:
       - name: Instalar ferramentas e limpar
         script: |
           npm install -g cordova@12.0.0
+          # Remove ES Module config do package.json se existir
           sed -i '' '/"type": "module"/d' package.json || true
           rm -rf platforms/ plugins/ node_modules/
           npm install
-      - name: Adicionar plataforma Android (v13.0.0)
+      - name: Adicionar plataforma Android (v12.0.1)
         script: |
-          cordova platform add android@13.0.0 --non-interactive --verbose
+          # Versão 12.0.1 é a recomendada para compatibilidade SDK 33/34 estável em CI
+          cordova platform add android@12.0.1 --non-interactive --verbose
       - name: Construir o APK de teste (Debug)
         script: |
-          # Forçamos o Gradle a usar as ferramentas de build 33.0.0 disponíveis no ambiente
-          cordova build android --debug --verbose --no-telemetry -- --gradleArg=-PcdvBuildToolsVersion=33.0.0
+          cordova build android --debug --no-telemetry --verbose
     artifacts:
       - platforms/android/app/build/outputs/apk/debug/app-debug.apk
