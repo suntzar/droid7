@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.framework7.droid7core" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="io.framework7.droid7core" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Droid7 App</name>
     <description>Droid7 - PWA/TWA Remote Wrapper</description>
     <author email="dev@droid7.io" href="http://droid7.io">Droid7 Team</author>
@@ -11,12 +11,19 @@
     <allow-intent href="https://*/*" />
     <allow-navigation href="http://163.176.132.233:3000" />
     <allow-navigation href="http://163.176.132.233:3000/*" />
+    <allow-navigation href="http://*" />
+    <allow-navigation href="https://*" />
 
     <preference name="DisallowOverscroll" value="true" />
     
     <platform name="android">
         <allow-intent href="market:*" />
         <preference name="StatusBarOverlaysWebView" value="false" />
+        
+        <!-- Habilita tráfego HTTP (Cleartext) -->
+        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+            <application android:usesCleartextTraffic="true" />
+        </edit-config>
     </platform>
 
     <plugin name="cordova-plugin-statusbar" spec="^3.0.0" />
