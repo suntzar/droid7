@@ -4,7 +4,6 @@
     <description>Droid7 - PWA/TWA Remote Wrapper</description>
     <author email="dev@droid7.io" href="http://droid7.io">Droid7 Team</author>
     
-    <!-- CONEXÃO DIRETA COM O IP DA VM (ESTILO TWA/OTA) -->
     <content src="http://163.176.132.233:3000" />
     
     <access origin="*" />
@@ -13,15 +12,12 @@
     <allow-navigation href="http://163.176.132.233:3000" />
     <allow-navigation href="http://163.176.132.233:3000/*" />
 
-    <preference name="ScrollEnabled" value="false" />
-    <preference name="android-minSdkVersion" value="22" />
-    <preference name="android-targetSdkVersion" value="33" />
-    <preference name="android-buildToolsVersion" value="33.0.0" />
-    <preference name="BackupWebStorage" value="none" />
     <preference name="DisallowOverscroll" value="true" />
     
     <platform name="android">
         <allow-intent href="market:*" />
-        <engine name="android" spec="12.0.1" />
+        <preference name="StatusBarOverlaysWebView" value="false" />
     </platform>
+
+    <plugin name="cordova-plugin-statusbar" spec="^3.0.0" />
 </widget>

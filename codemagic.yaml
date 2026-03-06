@@ -1,23 +1,22 @@
-# Configuração Droid7 Codemagic Workflow - Profissional v3.0 (Estabilidade Total)
+# Configuração Droid7 Codemagic Workflow - Simplificada
 workflows:
   android-debug-build:
-    name: Construir APK de Teste v3.0
+    name: Construir APK de Teste
     max_build_duration: 60
     instance_type: mac_mini_m1
     scripts:
       - name: Instalar ferramentas e limpar
         script: |
-          npm install -g cordova@12.0.0
-          # Remove ES Module config do package.json se existir
+          npm install -g cordova
+          # Remove ES Module config se existir no package.json
           sed -i '' '/"type": "module"/d' package.json || true
           rm -rf platforms/ plugins/ node_modules/
           npm install
-      - name: Adicionar plataforma Android (v12.0.1)
+      - name: Adicionar plataforma Android
         script: |
-          # Versão 12.0.1 é a recomendada para compatibilidade SDK 33/34 estável em CI
-          cordova platform add android@12.0.1 --non-interactive --verbose
+          cordova platform add android
       - name: Construir o APK de teste (Debug)
         script: |
-          cordova build android --debug --no-telemetry --verbose
+          cordova build android --debug
     artifacts:
       - platforms/android/app/build/outputs/apk/debug/app-debug.apk
