@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.framework7.droid7core" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Droid7 App</name>
-    <description>Droid7 - PWA/TWA Remote Wrapper</description>
+    <description>Droid7 - Professional Android Template</description>
     <author email="dev@droid7.io" href="http://droid7.io">Droid7 Team</author>
     
     <content src="http://163.176.132.233:3000" />
@@ -14,13 +14,17 @@
     <allow-navigation href="http://*" />
     <allow-navigation href="https://*" />
 
+    <!-- Configurações Visuais Profissionais -->
+    <preference name="Fullscreen" value="false" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarBackgroundColor" value="#2196f3" />
+    <preference name="StatusBarStyle" value="lightcontent" />
+    <preference name="NavigationBarColor" value="#f7f7f8" />
     <preference name="DisallowOverscroll" value="true" />
+    <preference name="BackgroundColor" value="#f7f7f8" />
     
     <platform name="android">
         <allow-intent href="market:*" />
-        <preference name="StatusBarOverlaysWebView" value="false" />
-        
-        <!-- Habilita tráfego HTTP (Cleartext) -->
         <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
             <application android:usesCleartextTraffic="true" />
         </edit-config>
