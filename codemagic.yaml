@@ -1,0 +1,17 @@
+# Configuração Droid7 Codemagic Workflow
+workflows:
+  android-debug-build:
+    name: Construir APK de Teste v2
+    scripts:
+      - name: Instalar ferramentas
+        script: |
+          npm install -g cordova
+      - name: Adicionar plataforma Android
+        script: |
+          cordova platform add android
+      - name: Construir o APK de teste (Debug)
+        script: |
+          cordova build android --debug
+    artifacts:
+      # ESTA LINHA FOI CORRIGIDA
+      - platforms/android/app/build/outputs/apk/debug/app-debug.apk

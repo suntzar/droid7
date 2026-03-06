@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#2196f3">
+    <title>Droid7 Core App</title>
+    <!-- Framework7 Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/framework7-icons@5/css/framework7-icons.min.css">
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+  <body>
+    <!-- App Root -->
+    <div id="app">
+      <!-- Main View -->
+      <div class="view view-main view-init" data-url="/">
+        <!-- Home Page (Directly in HTML for simplicity in Core) -->
+        <div class="page" data-name="home">
+          <!-- Top Navbar -->
+          <div class="navbar">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner">
+              <div class="title">Droid7 Android Template</div>
+              <div class="right">
+                <a href="/about/" class="link icon-only">
+                  <i class="icon f7-icons">info_circle</i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Toolbar (Tabbar) -->
+          <div class="toolbar toolbar-bottom tabbar tabbar-icons">
+            <div class="toolbar-inner">
+              <a href="/" class="tab-link tab-link-active">
+                <i class="icon f7-icons">house_fill</i>
+                <span class="tabbar-label">Home</span>
+              </a>
+              <a href="/settings/" class="tab-link">
+                <i class="icon f7-icons">gear_alt_fill</i>
+                <span class="tabbar-label">Settings</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Page Content -->
+          <div class="page-content">
+            <div class="block block-strong inset">
+              <p>Este app usa <b>Framework7 Core (Vanilla JS)</b>.</p>
+              <p>O layout está seguindo o padrão Material Design (Android) oficial.</p>
+            </div>
+
+            <div class="block-title">Navegação</div>
+            <div class="list strong inset dividers-ios">
+              <ul>
+                <li>
+                  <a href="/about/" class="item-link item-content">
+                    <div class="item-inner">
+                      <div class="item-title">Sobre o App</div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="block">
+              <button class="button button-fill button-large raised color-blue">Ação Principal</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

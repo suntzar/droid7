@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="io.framework7.droid7core" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Droid7 App</name>
+    <description>Droid7 - PWA/TWA Remote Wrapper</description>
+    <author email="dev@droid7.io" href="http://droid7.io">Droid7 Team</author>
+    
+    <!-- CONEXÃO DIRETA COM O IP DA VM (ESTILO TWA/OTA) -->
+    <content src="http://163.176.132.233:3000" />
+    
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-navigation href="http://163.176.132.233:3000" />
+    <allow-navigation href="http://163.176.132.233:3000/*" />
+
+    <preference name="ScrollEnabled" value="false" />
+    <preference name="android-minSdkVersion" value="22" />
+    <preference name="BackupWebStorage" value="none" />
+    <preference name="DisallowOverscroll" value="true" />
+    
+    <platform name="android">
+        <allow-intent href="market:*" />
+        <icon src="www/res/icon/android/icon.png" />
+    </platform>
+</widget>
